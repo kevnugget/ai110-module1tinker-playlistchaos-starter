@@ -31,5 +31,17 @@ For each error, we want to look at the code and see what is wrong with it.
         ```python
         for song in all_songs
         ``` 
-        to accurately track ALL energies
+        to accurately track ALL energies.
+
+- For the search function, whenever we would search an artist, we would get an empty list
+    - When we look at the search_songs function, we saw that the function originally checked if the song's artist is found in the query. However, since we want to check if the query is within the song's artist, we want to swap the check.
+        - We want to check if the query is in the song's artist, so instead of
+        ```python
+        if value and value in q:
+        ```
+        which was the original code, we do
+        ```python
+        if value and q in value
+        ```
+        to ensure that we are searching with our query.
 

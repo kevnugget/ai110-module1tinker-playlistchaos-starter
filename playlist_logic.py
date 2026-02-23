@@ -168,7 +168,7 @@ def search_songs(
 
     for song in songs:
         value = str(song.get(field, "")).lower()
-        if value and value in q:
+        if value and q in value: # FIXED SEARCH FUNCTION HERE, we want to look if the query (q) in the song's artist, not the artist in the query. swapped 'value in q' with 'q in value'
             filtered.append(song)
 
     return filtered
