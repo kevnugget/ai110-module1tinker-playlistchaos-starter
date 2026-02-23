@@ -73,9 +73,14 @@ def classify_song(song: Song, profile: Dict[str, object]) -> str:
     is_hype_keyword = any(k in genre for k in hype_keywords)
     is_chill_keyword = any(k in title for k in chill_keywords)
 
-    if genre == favorite_genre or energy >= hype_min_energy or is_hype_keyword:
+    is_hype = genre == favorite_genre or energy >= hype_min_energy or is_hype_keyword
+    is_chill = energy <= chill_max_energy, is_chill_keyword
+
+    if is_hype and is_chill:
+        return "Mixed"
+    if is_hype:
         return "Hype"
-    if energy <= chill_max_energy or is_chill_keyword:
+    if is_chill:
         return "Chill"
     return "Mixed"
 
@@ -183,11 +188,10 @@ def lucky_pick(
         songs = playlists.get("Hype", [])
     elif mode == "chill":
         songs = playlists.get("Chill", [])
-
     elif mode == 'mixed':
         songs = playlists.get("Mixed", [])
     else:
-        songs = playlists.get("Hype", []) + playlists.get("Chill", []) + playlists.get("Mixed", [])
+        songs = playlists.get("Hype", []) + playlists.get("Chill", []) + playlists.get("Mixed", []) # FIXED NO MIXED SONGS HERE, we want to also play mixed songs when choosing "Feeling Lucky"
 
     return random_choice_or_none(songs)
 
