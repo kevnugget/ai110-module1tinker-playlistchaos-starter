@@ -80,3 +80,7 @@ For each error, we want to look at the code and see what is wrong with it.
         for song in all_songs
         ``` 
         to accurately track ALL energies.
+
+## Summary for Tinker 1
+
+This Tinker aims to help students with debugging a music application through collaboration with AI. Instead of students instantly relying on AI with their code, they first have to actually understand what is the problem with application. At first, the program is very daunting at first, so it can be a little difficult to understand what to do. Students with not a lot of Python experience may be confused on what actually is wrong with the code and may just copy and paste everything into AI to find what is wrong, so it is STRONGLY recommended for students to spend a lot more time reading through the source code than just 15 minutes. To prevent from giving the students answers, I would recommend them to try each feature as mentioned in the assignment. There are little hints that the students should look at specific sections to test, and see what exactly is wrong. With that, they should be able to try the feature out on the application and see what is not working correctly. AI was very useful in describing the current code and telling us what is either right or wrong. However, it should be used with caution to not immediately give us the correct code, but why the current one is not working as expected. Emphasis on this part should be HIGHLY encouraged. 
