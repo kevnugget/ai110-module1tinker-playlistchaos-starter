@@ -19,7 +19,7 @@ The interface has the following errors that I was able to find:
 
 For each error, we want to look at the code and see what is wrong with it.
 
-- For the Hype Ratio, we notice that it is correctly dividing the total number of hype songs, by the length of the hype playlist, always giving us a ratio of 1.00
+- For the Hype Ratio, we notice that it is incorrectly dividing the total number of hype songs, by the length of the hype playlist, always giving us a ratio of 1.00
     - Here, we want to divide total, which is len(hype), by the length of all the songs in the playlist (len(all_songs))
     ```python
     total = len(hype)

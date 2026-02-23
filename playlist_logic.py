@@ -101,7 +101,6 @@ def build_playlists(songs: List[Song], profile: Dict[str, object]) -> PlaylistMa
 
     return playlists
 
-
 def merge_playlists(a: PlaylistMap, b: PlaylistMap) -> PlaylistMap:
     """Merge two playlist maps into a new map."""
     merged: PlaylistMap = {}
