@@ -299,7 +299,7 @@ def lucky_section(playlists):
 
     mode = st.selectbox(
         "Pick from",
-        options=["any", "hype", "chill"],
+        options=["any", "hype", "chill", "mixed"], # FIXED NO MIXED SONGS HERE, we want to also play mixed songs when choosing "Feeling Lucky"
         index=0,
     )
 

@@ -11,7 +11,8 @@ The interface has the following errors that I was able to find:
 - The "Hype Ratio" being incorrect at 1.00 and not calculating the ratio of hype songs to total songs
 - The search function is not working correctly as typing a name or a part of a name does not give us the expected result
 - When songs are given attributes of both chill and hype, such an energy level of 7 and a lofi genre, it will go the Hype playlist. It should go to the Mixed playlist since it is not clearly defined to fit into a single playlist
-- The history is not currently tracking anything and is empty
+- The 'Feeling Lucky' button is not playing Mixed songs, and is only playing Chill or Hype songs. 
+- History is not tracking mixed songs
 - The average energy is incorrectly tracked as it only summed the songs in the hype playlists instead of all songs
 
 ## Approaching Each Error
